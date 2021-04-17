@@ -1,0 +1,4 @@
+<!--components/x-back-to-top/x-back-to-top.wxml-->
+<view class="back-to-top-container" bind:tap="itemClick">
+  <image class="back-to-top" src="/assets/common/back_to_top.png"></image>
+</view>

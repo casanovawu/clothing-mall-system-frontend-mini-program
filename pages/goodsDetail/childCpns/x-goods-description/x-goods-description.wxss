@@ -1,0 +1,21 @@
+/* pages/goodsDetail/childCpns/x-goods-description/x-goods-description.wxss */
+.goods-declare-container {
+  background-color: white;
+  padding: 0 30rpx 50rpx 30rpx;
+}
+
+.goods-declare-text {
+  padding: 26rpx 20rpx 20rpx 20rpx;
+  font-size: 24rpx;
+  background-color: #f8f8f8;
+  color: #aaa;
+  border-radius: 8rpx;
+}
+
+.goods-declare-text .title {
+  color: #444;
+}
+
+.declare-item {
+  margin-bottom: 18rpx;
+}

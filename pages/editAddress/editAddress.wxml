@@ -1,0 +1,84 @@
+<!--pages/editAddress/editAddress.wxml-->
+<view class="edit-address-container">
+  <view class="edit-address-content-container">
+    <van-field 
+      label-class="van-field-label-class"
+      model:value="{{ userName }}" 
+      clearable 
+      label="收货人" 
+      placeholder="收货人姓名"
+      />
+    <van-field 
+      label-class="van-field-label-class"
+      model:value="{{ telNumber }}" 
+      clearable 
+      label="手机号码" 
+      placeholder="收货人手机号" />
+    <view class="region" bind:tap="handleRegionItemClick">
+      <van-field 
+        label-class="van-field-label-class"
+        value="{{region}}" 
+        readonly 
+        clearable 
+        label="所在地区" 
+        placeholder="选择省/市/区"
+        right-icon="arrow"
+      />
+    </view>
+    <view class="detail-address">
+      <van-field 
+        label-class="van-field-label-class"
+        model:value="{{ detailInfo }}" 
+        clearable 
+        type="textarea"
+        label="详细地址" 
+        autosize
+        placeholder="请填写详细地址"
+        use-slot
+        border="{{false}}"
+          >
+        <view slot="right-icon" class="location" bind:tap="handleLocationClick">
+          <image class="location-logo" src="/assets/common/location.png" mode="widthFix"></image>
+          <text class="location-name">定位</text>
+        </view>
+      </van-field>
+    </view>
+  </view>
+
+  <view class="default-shipping-address-container">
+    <view class="default-shipping-address">
+      设为默认收货地址
+    </view>
+    <van-switch class="switch" checked="{{ isDefaultAddressChecked }}" size="24px" active-color="#ff0c46" inactive-color="#fff"
+      bind:change="onDefaultAddressChange" />
+  </view>
+
+  <view class="save-use-button" bind:tap="onSaveAndUseButtonClick">
+    保存并使用
+  </view>
+
+  <view class="delete-button" bind:tap="onDeleteAddressButtonClick">
+    删除收货地址
+  </view>
+</view>
+
+
+<!-- 点击【所在地区】按钮时弹出 -->
+<van-popup
+  show="{{ isShowRegionPopup }}"
+  position="bottom"
+  custom-style="height: 50%"
+  bind:close="onRegionPopupClose"
+>
+  <van-area 
+    class="area"
+    value
+    area-list="{{ areaList }}" 
+    columns-placeholder="{{ ['请选择', '请选择', '请选择'] }}"
+    bind:cancel="onRegionCancel"
+    bind:confirm="onRegionConfirm"
+    bind:change="onRegionChange"/>
+</van-popup>
+
+<!-- 轻提示 -->
+<van-toast id="van-toast" />

@@ -1,0 +1,30 @@
+var fixPrice = function(price, number) {
+  var num = number || 2
+  price = Number(price)
+  // console.log('price---', price)
+  return price.toFixed(num)
+}
+
+var formatNumber = function(n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+var getInteger = function(price) {
+  price = Number(price)
+  var ret = price.toFixed(2).split('.')[0]
+  return ret ? ret : '0'
+} 
+
+var getDecimal = function(price) {
+  price = Number(price)
+  var ret = price.toFixed(2).split('.')[1]
+  return ret ? ret : '0'
+} 
+
+module.exports = {
+  fixPrice: fixPrice,
+  formatNumber: formatNumber,
+  getInteger: getInteger,
+  getDecimal: getDecimal
+}

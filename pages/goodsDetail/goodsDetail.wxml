@@ -1,0 +1,52 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<x-swiper class="detail-swiper" banners="{{goodsBanners}}" />
+
+<!-- 商品名称以及价格等描述 -->
+<x-detail-desc goodsDetail="{{goodsDetail}}" />
+
+<!-- 运费服务 -->
+<x-delivery-service />
+
+<!-- 服务与选择 -->
+<x-sku-service 
+  class="x-sku-service"
+  goodsPrice="{{goodsDetail.newPrice}}"
+  goodsSkus="{{goodsSkus}}" 
+  goodsAttrKeys="{{goodsAttrKeys}}"
+  goodsBanners="{{goodsBanners}}"
+  confirmContent="{{confirmContent}}"
+  bind:addCartConfirmButtonClick="handleAddCartConfirmButtonClick"
+  bind:buyNowConfirmButtonClick="handleBuyNowConfirmButtonClick"/>
+
+<!-- 店铺信息 -->
+<x-shop-info />
+
+<!-- 商品详细图片展示 -->
+<x-goods-images-detail goodsDetailImgs="{{goodsDetailImgs}}"/>
+
+<!-- 商品说明 -->
+<x-goods-description />
+
+<!-- 底部开发者声明 -->
+<x-bottom-declare class="x-bottom-declare" />
+
+<!-- 商品导航（加入购物车和立即购买） -->
+<van-goods-action custom-class="goods-action-button-class">
+  <!-- <van-goods-action-icon icon="chat-o" text="客服" bind:tap="OnActionServiceButtonClick"/> -->
+  <van-goods-action-icon icon="chat-o" text="客服" open-type="contact" bind:contact="handleContact" />
+  <van-goods-action-icon icon="cart-o" text="购物车" info="{{cartLength}}" bind:tap="onActionCartButtonClick"/>
+  <van-goods-action-icon icon="shop-o" text="店铺" bind:tap="onActionShopButtonClick" />
+  <van-goods-action-button text="加入购物车" color="#ff8c87" bind:tap="onAddCart"/>
+  <van-goods-action-button text="立即购买" color="#ff0c46" bind:tap="onBuyNow"/>
+</van-goods-action>
+
+
+<!-- 返回顶部按钮 -->
+<x-back-to-top wx:if="{{isBackTopShow}}" />
+
+<!-- 购买数量偏离设定阈值时显示 -->
+<!-- 注意：这里的 van-toast 不能放到自定义组件x-sku-service中，否则该 van-toast 组件无法生效！ -->
+<van-toast id="van-toast" />
+
+<!-- 登录框 -->
+<x-login isLoginShow="{{showLoginPanel}}"/>

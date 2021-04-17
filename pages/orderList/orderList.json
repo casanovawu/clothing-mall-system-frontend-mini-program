@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "van-card": "@vant/weapp/card/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    
+    "x-order-option": "./childCpns/x-order-option/x-order-option",
+    "x-no-order": "./childCpns/x-no-order/x-no-order",
+    "x-pay-button": "./childCpns/x-pay-button/x-pay-button",
+
+    "x-developing": "/components/x-developing/x-developing",
+    "x-pay-action-popup": "/components/x-pay-action-popup/x-pay-action-popup"
+  },
+  "navigationBarTitleText": "订单列表",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black"
+}

@@ -1,0 +1,9 @@
+<!--pages/goodsDetail/childCpns/x-shop-info/x-shop-info.wxml-->
+<view class="shop-container">
+  <image src="/assets/common/logo.jpg" mode="widthFix"></image>
+  <view class="shop-desc">
+    <view class="shop-name">梦想女孩</view>
+    <view class="shop-certification">企业认证</view>
+  </view>
+  <view class="shop-watch" bind:tap="onShopButtonClick">进店逛逛</view>
+</view>

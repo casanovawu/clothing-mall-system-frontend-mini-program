@@ -1,0 +1,20 @@
+<!--components/x-login/x-login.wxml-->
+<van-popup
+  show="{{ visible }}"
+  closeable
+  round
+  close-on-click-overlay="{{false}}"
+  position="bottom"
+  custom-style="height: 45%"
+  bind:close="onClose"
+>
+  <view class="login-container">
+    <view class="login-heading">
+      <image src="/assets/common/logo.jpg" mode="widthFix"></image>
+      <view>欢迎来到梦想女孩</view>
+    </view>
+    <view class="login-purpose">为提供更优质的服务，梦想女孩需要获取以下信息：</view>
+    <view class="login-tip">● 你的公开信息（昵称、头像、地区及性别）</view>
+    <button class="login-button" type="primary" bindgetuserinfo="login" open-type="getUserInfo">确认</button>
+  </view>
+</van-popup>

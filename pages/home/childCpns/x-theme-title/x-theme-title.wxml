@@ -1,0 +1,6 @@
+<!--pages/home/childCpns/x-theme-title/x-theme-title.wxml-->
+<view class="theme-title">
+  <image class="theme-left" mode="widthFix" src="/assets/common/theme-left.png"></image>
+  <text class="theme-text">{{themeObj[themeType]}}</text>
+  <image class="theme-right" mode="widthFix" src="/assets/common/theme-right.png"></image>
+</view>

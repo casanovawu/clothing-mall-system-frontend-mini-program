@@ -1,0 +1,21 @@
+<!--pages/home/home.wxml-->
+
+<van-search 
+  placeholder="搜索商品" 
+  background="#ff0c46"
+  disabled 
+  shape="round"
+  bind:tap="onSearchTap"/>
+  
+<x-swiper 
+  banners="{{banners}}"
+  bind:itemClick="onItemClick"/>
+
+<x-theme  
+  themeList="{{themeList}}"
+  themeObj="{{themeObj}}"
+  themeInfo="{{themeInfo}}" />
+
+<x-bottom-declare />
+
+<x-back-to-top wx:if="{{isBackTopShow}}"/>

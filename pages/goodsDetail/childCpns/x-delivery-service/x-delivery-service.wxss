@@ -1,0 +1,19 @@
+/* pages/goodsDetail/childCpns/x-delivery-service/x-delivery-service.wxss */
+.delivery-container {
+  display: flex;
+  align-items: center;
+  height: 50rpx;
+  background-color: #fff;
+  border-bottom: 16rpx solid #f9f9f9;
+  font-size: 28rpx;
+  padding: 20rpx 20rpx 20rpx 26rpx;
+}
+
+.delivery-container .delivery-name {
+  color: #aaa;
+}
+
+.delivery-container .delivery-desc {
+  margin-left: 20rpx;
+  color: #333;
+}

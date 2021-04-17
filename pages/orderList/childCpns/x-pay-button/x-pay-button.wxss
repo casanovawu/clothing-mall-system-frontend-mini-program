@@ -1,0 +1,16 @@
+/* pages/orderList/childCpns/x-pay/x-pay.wxss */
+.pay-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  padding: 16rpx 0;
+}
+
+.pay-button-wrapper .pay-button {
+  margin-left: 20rpx !important;
+}
+
+
+
+

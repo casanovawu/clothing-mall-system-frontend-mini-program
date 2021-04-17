@@ -1,0 +1,9 @@
+<!--pages/cart/childCpns/x-empty-cart/x-empty-cart.wxml-->
+<view class="empty-cart-container">
+  <view class="empty-content">
+    <image src="/assets/cart/no-data-cart.png" mode="widthFix"></image>
+    <view class="cart-desc">购物车还是空的</view>
+    <view class="cart-tip">赶紧买点宝贝慰劳一下自己吧</view>
+    <view class="go-to-view" bind:tap="onGoToViewClick">去逛逛</view>
+  </view>
+</view>

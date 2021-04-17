@@ -1,0 +1,7 @@
+<!--pages/orderList/childCpns/x-pay/x-pay.wxml-->
+<view class="pay-container">
+  <view class="pay-button-wrapper">
+    <van-button custom-class="pay-button" color="#333" plain size="small" catch:tap="cancelButtonClick">取消</van-button>
+    <van-button custom-class="pay-button" color="#ff0c46" size="small" catch:tap="confirmButtonClick">付款</van-button>
+  </view>
+</view>

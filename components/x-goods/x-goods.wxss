@@ -1,0 +1,18 @@
+/* components/x-goods/x-goods.wxss */
+.goods-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.x-goods-item {
+  width: 42%;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 12rpx 12rpx 16rpx 12rpx;
+  color: #333;
+  text-align: center;
+}
+

@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "x-login": "/components/x-login/x-login",
+
+    "x-no-login": "./childCpns/x-no-login/x-no-login",
+    "x-cart-heading": "./childCpns/x-cart-heading/x-cart-heading",
+    "x-empty-cart": "./childCpns/x-empty-cart/x-empty-cart",
+
+    "van-toast": "@vant/weapp/toast/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-checkbox": "@vant/weapp/checkbox/index"
+  },
+  "navigationBarTitleText": "购物车",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

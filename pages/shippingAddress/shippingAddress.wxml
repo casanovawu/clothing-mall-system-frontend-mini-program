@@ -1,0 +1,27 @@
+<!--pages/shipping-address/shipping-address.wxml-->
+<x-weixin-shipping-address class="x-weixin-shipping-address" bind:onWeixinShippingAddressButtonClick="handleWeixinShippingAddressButtonClick" />
+
+<view class="address-list-container">
+  <van-cell-group>
+    <block wx:for="{{addressList}}" wx:key="addressId">
+      <van-cell custom-class="address-item" use-label-slot>
+        <view slot="title">
+          <view class="van-cell-text">{{item.userName}} {{item.telNumber}}</view>
+        </view>
+        <view slot="label">
+          <view class="van-cell-text">{{item.region + item.detailInfo}}</view>
+        </view>
+        <van-icon data-id="{{item.addressId}}" catch:tap="editSelectedAddress" slot="right-icon" name="edit" size="40rpx"/>
+      </van-cell>
+    </block>
+  </van-cell-group>
+</view>
+
+<view class="add-address-button-container"> 
+  <view class="add-address-button" bind:tap="goToAddAddress">新增地址</view>
+</view>
+
+<x-bottom-declare class="x-bottom-declare"/>
+
+
+

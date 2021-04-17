@@ -1,0 +1,5 @@
+<!--pages/goodsDetail/childCpns/x-delivery-service/x-delivery-service.wxml-->
+<view class="delivery-container">
+  <view class="delivery-name">运费</view>
+  <view class="delivery-desc">免运费，全国包邮</view>
+</view>

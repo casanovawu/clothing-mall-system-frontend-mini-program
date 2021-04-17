@@ -1,0 +1,8 @@
+<!--pages/cart/childCpns/x-no-login/x-no-login.wxml-->
+<view class="no-login-container">
+  <view class="logo">
+    <image src="/assets/cart/no-login-brand-logo.png" mode="widthFix"></image>
+  </view>
+  <view class="login-button" bind:tap="onLoginButtonClick">登录查看购物车</view>
+  <view class="no-login-text">为保护您的隐私，请登录后查看购物车内容</view>
+</view>

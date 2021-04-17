@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-area": "@vant/weapp/area/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "x-weixin-shipping-address": "/components/x-weixin-shipping-address/x-weixin-shipping-address"
+  },
+  "navigationBarTitleText": "新增地址",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black"
+}

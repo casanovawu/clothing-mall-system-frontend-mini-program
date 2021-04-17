@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "x-goods": "/components/x-goods/x-goods",
+    "x-empty-container": "/components/x-empty-container/x-empty-container"
+  }
+}

@@ -1,0 +1,47 @@
+/* pages/goodsDetail/childCpns/x-shop-info/x-shop-info.wxss */
+.shop-container {
+  position: relative;
+  height: 120rpx;
+  padding: 20rpx 20rpx 20rpx 26rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 16rpx solid #f9f9f9;
+}
+
+.shop-container image {
+  width: 80rpx;
+}
+
+.shop-desc {
+  margin-left: 20rpx;
+}
+
+.shop-desc .shop-name {
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+}
+
+.shop-desc .shop-certification {
+  text-align: center;
+  width: 100rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: white;
+  font-size: 20rpx;
+  font-weight: 600;
+  background-color: #c3a769;
+  border-radius: 5rpx;
+}
+
+
+.shop-watch {
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 2rpx solid #ff0c46;
+  border-radius: 30rpx;
+  font-size: 20rpx;
+  color: #ff0c46;
+  margin-left: 330rpx;
+}

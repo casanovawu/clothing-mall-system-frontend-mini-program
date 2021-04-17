@@ -1,0 +1,8 @@
+<!--components/x-weixin-shipping-address/x-weixin-shipping-address.wxml-->
+<view class="wx-shipping-container" bind:tap="onShippingClick">
+  <view class="left-item">
+    <image src="/assets/common/weixin-logo.png" mode="widthFix"></image>
+    <text class="wx-shipping-name">获取微信收货地址</text>
+  </view>
+  <image class="right-arrow" src="/assets/common/right-arrow.png" mode="widthFix"></image>
+</view>

@@ -1,0 +1,83 @@
+/* pages/cart/cart.wxss */
+page {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 124rpx;
+  background-color: #f7f8fa;
+}
+
+.cart-goods-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 126rpx;
+}
+
+.cart-goods-container .cart-goods-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 87%;
+  background-color: #fff;
+  padding: 30rpx 28rpx 70rpx 28rpx;
+  border-radius: 10rpx;
+  margin-bottom: 24rpx;
+}
+
+.cart-goods-item .goods-check-button {
+  width: 60rpx;
+  padding: 80rpx 8rpx;
+}
+
+.cart-goods-item .goods-info {
+  flex: 1;
+}
+
+/* 修改商品展示卡片的显示样式 */
+.cart-goods-item .goods-info .custom-card {
+  --card-padding: 0 !important;
+  --card-background-color: #fff !important;
+  --card-price-color: #ff0c46 !important;
+  --card-thumb-size: 130rpx !important;
+  --padding-xs: 24rpx !important;
+}
+
+.cart-goods-item .goods-info .custom-thumb {
+  --border-radius-lg: 10rpx !important;
+}
+
+.cart-goods-item .goods-info .custom-desc {
+  margin-bottom: 20rpx !important;
+}
+
+.cart-goods-item .custom-stepper-class {
+  position: absolute;
+  right: 24rpx;
+  bottom: 28rpx;
+}
+
+.custom-bar-class {
+  box-shadow: 0 -10rpx 10rpx rgba(180, 179, 179, 0.1);
+}
+
+.custom-price-class {
+  --submit-bar-price-color: #ff0c46 !important;
+  font-weight: 600 !important;
+}
+
+.custom-button-class {
+  --button-danger-background-color: #ff0c46 !important;
+  --button-danger-border-color: #ff0c46 !important;
+  font-weight: 600 !important;
+}
+
+
+.custom-button-delete-class {
+  --button-danger-background-color: #e5e5e5 !important;
+  --button-danger-border-color: #e5e5e5 !important;
+  --button-danger-color: #999 !important;
+}
+
+.custom-delete-all-button {
+  margin-right: 350rpx;
+}

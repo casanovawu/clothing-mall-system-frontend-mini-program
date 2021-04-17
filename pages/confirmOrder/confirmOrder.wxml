@@ -1,0 +1,189 @@
+<!--pages/confirm-order/confirm-order.wxml-->
+
+<wxs src="../../wxs/price.wxs" module="priceObj"/>
+
+<view class="address-container">
+  <block wx:if="{{selectedAddressInfo.addressId}}">
+    <view class="address-content" bind:tap="chooseShippingAddress">
+    <view class="region">{{selectedAddressInfo.region}}</view>
+    <view class="detail-info">{{selectedAddressInfo.detailInfo}}</view>
+    <view class="user">{{selectedAddressInfo.userName}} {{selectedAddressInfo.telNumber}}</view>
+    <image src="../../assets/common/right-arrow.png" mode="widthFix"></image>
+    </view>
+    <view class="distri-mode">
+      <view class="title">配送方式</view>
+      <view class="content">快递 免运费</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="no-select-address" bind:tap="chooseShippingAddress">
+      <image src="/assets/common/location.png" mode="widthFix"></image>
+      <view class="text">您当前未选择任何地址哦~</view>
+    </view>
+  </block>
+</view>
+
+<view class="order-list-container">
+  <view class="shop">
+    <image src="../../assets/common/shop.png" mode="widthFix"></image>
+    梦想女孩
+  </view>
+  <view class="order-list-content">
+    <block wx:for="{{confirmedList}}" wx:key="id">
+      <view class="order-item">
+        <van-card 
+          custom-class="custom-card"
+          thumb-class="custom-thumb"
+          desc-class="custom-desc"
+          thumb-mode="widthFix"
+          num="{{item.num}}" 
+          price="{{item.goodsObj.newPrice && priceObj.fixPrice(item.goodsObj.newPrice)}}" 
+          desc="{{item.goodsSkuDesc}}" 
+          title="{{item.goodsObj.goodsName}}" 
+          thumb="{{item.goodsObj.showImg}}" />
+      </view>
+    </block>
+    
+  </view>
+  <view class="count-and-totalNum">
+    <view class="count">共{{totalNum}}件</view>
+    <view class="totalNum">
+      商品小计：
+      <view class="totalNum-text">
+        <text class="currency-text">¥</text>
+        <text class="price-integer">{{totalPrice && priceObj.getInteger(totalPrice)}}</text>
+        <text>.</text>
+        <text>{{totalPrice && priceObj.getDecimal(totalPrice)}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="coupon-container">
+  <van-cell value="暂无可用" is-link bind:click="onCouponButtonClick">
+    <view slot="title">
+      <view class="van-cell-title">优惠券</view>
+    </view> 
+  </van-cell>
+  <van-cell value-class="custom-youzan-value" value="商家赠送" is-link bind:click="showPromisePopup" border="{{ false }}">
+    <view slot="title">
+      <view class="van-cell-title">梦科凡奇担保</view>
+    </view> 
+  </van-cell>
+</view>
+
+<view class="{{'leaving-message-container ' + ((isPromisePopupShow || isPayActionPopupShow) ? 'hide' : '' )}}">
+  <van-field
+    placeholder="留言建议提前协商（250字以内）"
+    model:value="{{leaveMessage}}"
+    type="textarea"
+    autosize
+    border="{{ false }}"
+  >
+  <view slot="label">
+      <view class="van-cell-label">买家留言</view>
+    </view> 
+  </van-field> 
+</view>
+
+<x-bottom-declare/>
+
+<van-submit-bar
+  bar-class="custom-bar-class"
+  price-class="custom-price-class"
+  button-class="custom-button-class"
+  label="{{false}}"
+  button-text="去付款"
+  bind:submit="onOrderSubmit"
+>
+  <view slot="tip" wx:if="{{isAddressTip}}">收货地址：{{selectedAddressInfo.region + selectedAddressInfo.detailInfo}}</view>
+  <view class="total-price">
+    合计：
+      <view class="totalNum-text">
+        <text class="currency-text">¥</text>
+        <text class="price-integer">{{totalPrice && priceObj.getInteger(totalPrice)}}</text>
+        <text>.</text>
+        <text>{{totalPrice && priceObj.getDecimal(totalPrice)}}</text>
+      </view>
+      <view class="delivery-declare">含运费：¥0.00</view>
+  </view>
+</van-submit-bar>
+
+
+<!-- 梦科凡奇担保弹出框 -->
+<van-popup
+  show="{{ isPromisePopupShow }}"
+  round
+  position="bottom"
+  custom-style="height: 50%"
+  bind:close="onPromisePopupClose"
+>
+  <view class="youzan-promise-popup-container">
+    <view class="title">梦科凡奇担保</view>
+    <view class="content">
+      <view>梦科凡奇担保是商家赠送给你的消费保障服务。</view>
+      <view>如订单出现售后问题，梦科凡奇提供专属客服，优先介入处理。在符合赔付条件的情况下，梦科凡奇将联合保险公司优先为你赔付（储值卡等不予受理）。</view>
+    </view>
+    <view class="confirm-button" bind:tap="onPromisePopupConfirm">我知道了</view>
+  </view>
+</van-popup>
+
+
+<!-- 选择收货地址弹出框 -->
+<van-popup
+  custom-class="shipping-address-popup-class"
+  show="{{ isChooseAddressPopupShow }}"
+  round
+  position="bottom"
+  custom-style="height: 80%"
+  bind:close="onChooseAddressPopupClose"
+>
+  <view class="choose-address-popup-container">
+    <view class="title">
+      选择收货地址
+      <view class="close-button" bind:tap="onChooseAddressPopupClose">X</view>
+    </view>
+      <!-- 内容区域使用 scroll-view 组件，防止出现高度抖动 -->
+      <scroll-view class="scroll-view-container" scroll-y="true" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <x-weixin-shipping-address class="x-weixin-shipping-address" bind:onWeixinShippingAddressButtonClick="handleWeixinShippingAddressButtonClick"/>
+        <view class="shipping-address-container" wx:if="{{addressList.length !== 0}}"> 
+          <van-radio-group value="{{selectedAddressInfo.addressId}}">
+            <van-cell-group>
+              <block wx:for="{{addressList}}" wx:key="addressId">
+                <van-cell custom-class="address-item" use-label-slot bind:tap="onAddressItemClick" data-name="{{item.addressId}}">
+                  <view slot="icon" class="choose-icon">
+                    <van-radio icon-size="16px" checked-color="#ff0c46" name="{{item.addressId}}" />
+                  </view>
+                  <view slot="title">
+                    <view class="van-cell-text">{{item.userName}} {{item.telNumber}}</view>
+                  </view>
+                  <view slot="label">
+                    <view class="van-cell-text">{{item.region + item.detailInfo}}</view>
+                  </view>
+                  <van-icon custom-class="edit-icon" data-id="{{item.addressId}}" catch:tap="editSelectedAddress" slot="right-icon" name="edit" size="40rpx" />
+                </van-cell>
+              </block>
+              
+            </van-cell-group>
+          </van-radio-group>
+        </view>
+      </scroll-view>
+    
+    <view class="add-address-button-container"> 
+      <view class="add-address-button" bind:tap="goToAddAddress">新增地址</view>
+    </view>
+  </view>
+</van-popup>
+
+<van-toast id="van-toast" />
+
+<x-login isLoginShow="{{showLoginPanel}}" bind:loginSuccess="handleLoginSuccess" />
+
+<!-- 模拟支付弹框 -->
+<x-pay-action-popup 
+  isPayActionPopupShow="{{isPayActionPopupShow}}"
+  bind:onPaySuccess="onPaySuccess"
+  bind:onPayCancel="onPayCancel" />
+
+
+

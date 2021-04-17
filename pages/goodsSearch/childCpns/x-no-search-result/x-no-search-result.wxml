@@ -1,0 +1,7 @@
+<!--pages/goodsSearch/childCpns/x-no-search-result/x-no-search-result.wxml-->
+<view class="no-data-container">
+  <image src="/assets/goods-search/no-data.png" mode="widthFix"></image>
+  <view>没有找到您想要的商品</view>
+  <view>换个搜索词试试</view>
+</view>
+

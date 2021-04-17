@@ -1,0 +1,14 @@
+/* pages/goodsDetail/childCpns/x-goods-images-detail/x-goods-images-detail.wxss */
+
+.goods-image-detail-container {
+  padding: 16rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.goods-image-detail-container image {
+  width: 95%;
+  margin-bottom: 4rpx;
+}
+

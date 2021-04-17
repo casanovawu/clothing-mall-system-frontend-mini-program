@@ -1,0 +1,48 @@
+/* pages/goodsSearch/childCpns/x-search-histroy/x-search-history.wxss */
+.history-container {
+  width: 86%;
+  margin: auto;
+  border-radius: 10rpx;
+  background-color: white;
+  padding: 24rpx 24rpx 40rpx 24rpx;
+  margin-top: 24rpx;
+}
+
+.history-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history-heading .history-name {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.history-heading .history-trash {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.history-heading .history-trash image {
+  width: 30rpx;
+  margin-right: 4rpx;
+}
+
+.history-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.history-content .history-item {
+  margin-top: 24rpx;
+  margin-right: 12rpx;
+  padding: 12rpx 30rpx;
+  border-radius: 500rpx;
+  color: #7c7c7c;
+  font-size: 24rpx;
+  background-color: #f7f8fa;
+}

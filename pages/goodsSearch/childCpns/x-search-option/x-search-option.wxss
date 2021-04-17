@@ -1,0 +1,38 @@
+/* pages/goodsSearch/childCpns/x-search-option/x-search-option.wxss */
+.search-option-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  margin-bottom: 16rpx;
+}
+
+.search-option-container .option {
+  position: relative;
+  height: 80rpx;
+  line-height: 80rpx;
+  flex: 1;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+}
+
+.search-option-container .option:nth-child(2) .up-arrow {
+  position: absolute;
+  top: 8rpx;
+  right: 58rpx;
+  width: 46rpx;
+}
+
+.search-option-container .option:nth-child(2) .bottom-arrow {
+  position: absolute;
+  top: 24rpx;
+  right: 58rpx;
+  width: 46rpx;
+}
+
+.active {
+  color: #ff0c46 !important;
+}

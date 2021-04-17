@@ -1,0 +1,132 @@
+/* pages/add-address/add-address.wxss */
+page {
+  width: 100%;
+  background-color: #f7f8fa;
+}
+
+.x-weixin-shipping-address > view {
+  margin-top: 20rpx;
+}
+
+.add-address-content-container {
+  background-color: #fff;
+  color: #333;
+  padding: 14rpx 0;
+  width: 94%;
+  margin: auto;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.add-address-content-container .van-field-label-class {
+  margin-right: 0 !important;
+}
+
+.add-address-content-container .detail-address {
+  position: relative;
+}
+
+.add-address-content-container .location {
+  display: flex;
+  font-size: 22rpx;
+  color: #bfbec3;
+  padding: 6rpx;
+}
+
+.add-address-content-container .location .location-logo {
+  width: 30rpx;
+}
+
+.add-address-content-container .intellect-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 6rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  height: 40rpx;
+  font-size: 20rpx;
+  color: #bfbec3;
+  background-color: white;
+}
+
+.add-address-content-container .intellect-button image {
+  position: relative;
+  right: 10rpx;
+  width: 50rpx;
+
+}
+
+.diy-input-content {
+  padding: 20rpx 28rpx;
+}
+
+.diy-input-content .content {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f5f8f8;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  padding: 28rpx 20rpx;
+  height: 170rpx;
+}
+
+.diy-input-content .action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  padding-right: 10rpx;
+}
+
+.diy-input-content .action .cancel {
+  padding: 0 10rpx;
+}
+
+.diy-input-content .action .recognize {
+  width: 66rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  padding: 10rpx 20rpx;
+  border: 1rpx solid #ff0c46;
+  border-radius: 50rpx;
+  color: #ff0c46;
+  margin-left: 30rpx;
+  text-align: center;
+}
+
+.default-shipping-address-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14rpx 28rpx;
+  font-size: 28rpx;
+  color: #333;
+  width: 87%;
+  margin: auto;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  height: 60rpx;
+}
+
+.default-shipping-address-container .switch {
+  padding-top: 8rpx !important;
+}
+
+.save-use-button {
+  height: 50rpx;
+  line-height: 50rpx;
+  color: white;
+  font-size: 32rpx;
+  text-align: center;
+  padding: 16rpx 18rpx;
+  width: 89%;
+  margin: auto;
+  background-color: #ff0c46;
+  border-radius: 100rpx;
+  margin-top: 50rpx;
+}

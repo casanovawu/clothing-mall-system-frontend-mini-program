@@ -1,0 +1,6 @@
+<!--pages/goodsDetail/childCpns/x-goods-images-detail/x-goods-images-detail.wxml-->
+<view class="goods-image-detail-container">
+  <block wx:for="{{goodsDetailImgs}}" wx:key="index">
+    <image src="{{item.showImg}}" mode="widthFix"></image>
+  </block>
+</view>

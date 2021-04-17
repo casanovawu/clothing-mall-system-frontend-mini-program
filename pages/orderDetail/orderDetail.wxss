@@ -1,0 +1,4 @@
+/* pages/orderDetail/orderDetail.wxss */
+.order-detail-container {
+  padding: 20rpx 20rpx;
+}

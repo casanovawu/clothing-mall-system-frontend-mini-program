@@ -1,0 +1,45 @@
+/* pages/cart/childCpns/x-cart-heading/x-cart-heading.wxss */
+.cart-heading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: 0 26rpx;
+  margin-bottom: 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.cart-heading-container .cart-title {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 32rpx;
+}
+
+.cart-heading-container .cart-title image {
+  width: 30rpx;
+}
+
+.cart-heading-container .cart-title .shop-image {
+  position: relative;
+  bottom: 2rpx;
+}
+
+.cart-heading-container .cart-title .shop-name {
+  margin: 0 16rpx;
+}
+
+.cart-heading-container .cart-edit {
+  height: 100%;
+  font-size: 28rpx;
+  color: #333;
+  padding: 0 10rpx;
+}

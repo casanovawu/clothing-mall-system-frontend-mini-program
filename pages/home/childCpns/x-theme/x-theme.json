@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "x-theme-title": "../x-theme-title/x-theme-title",
+    "x-goods": "/components/x-goods/x-goods"
+  }
+}

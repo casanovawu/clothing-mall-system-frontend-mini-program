@@ -1,0 +1,4 @@
+/* pages/goodsSearch/childCpns/x-search-result/x-search-result.wxss */
+.search-result-container {
+  background-color: #f7f8fa;
+}

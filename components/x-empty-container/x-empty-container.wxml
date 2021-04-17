@@ -1,0 +1,2 @@
+<!--components/x-empty-container/x-empty-container.wxml-->
+<view class="empty-container cbackgroundcolorclass cheightclass"></view>

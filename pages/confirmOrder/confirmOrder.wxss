@@ -1,0 +1,382 @@
+/* pages/confirm-order/confirm-order.wxss */
+page {
+  width: 100%;
+  background-color: #f7f8fa;
+  box-sizing: border-box;
+  padding-bottom: 200rpx;
+}
+
+.address-container {
+  width: 87%;
+  margin: auto;
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 26rpx;
+  border-radius: 10rpx;
+}
+
+.address-content {
+  position: relative;
+  border-bottom: 1rpx solid #efefef;
+  color: #333;
+  padding-bottom: 26rpx;
+}
+
+.address-content .region,
+.address-content .user {
+  font-size: 28rpx;
+}
+
+.address-content .detail-info {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin: 18rpx 0;
+}
+
+.address-content image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-75%);
+  right: 10rpx;
+  width: 30rpx;
+}
+
+.address-container .distri-mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.address-container .no-select-address {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.address-container .no-select-address image {
+  width: 100rpx;
+}
+
+.order-list-container {
+  width: 87%;
+  margin: auto;
+  margin-top: 24rpx;
+  background-color: #fff;
+  padding: 26rpx;
+  border-radius: 10rpx;
+}
+
+.shop {
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+
+.shop image {
+  width: 30rpx;
+  margin-right: 10rpx;
+}
+
+.order-list-content {
+  position: relative;
+  margin-top: 30rpx;
+}
+
+.order-list-content .order-item {
+  margin-bottom: 20rpx;
+  height: 200rpx;
+}
+
+.order-list-content .order-item .custom-card {
+  --card-padding: 0 !important;
+  --card-background-color: #fff !important;
+  --card-price-color: #ff0c46 !important;
+  --card-thumb-size: 120rpx !important;
+  --padding-xs: 24rpx !important;
+}
+
+.order-list-content .order-item .custom-thumb {
+  --border-radius-lg: 8rpx !important;
+}
+
+.order-list-content .order-item .custom-desc {
+  margin-bottom: 10rpx !important;
+}
+
+.count-and-totalNum {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40rpx;
+  color: #333;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+.count-and-totalNum .totalNum {
+  margin-left: 14rpx;
+  color: #333;
+}
+
+.count-and-totalNum .count {
+  position: relative;
+  top: 4rpx;
+}
+
+.count-and-totalNum .totalNum .totalNum-text {
+  display: inline-block;
+  color: #ff0c46;
+  font-weight: 600;
+  font-size: 24rpx;
+}
+
+.count-and-totalNum .totalNum .totalNum-text .currency-text {
+  font-size: 24rpx;
+  margin-right: 4rpx;
+}
+
+.count-and-totalNum .totalNum .totalNum-text .price-integer {
+  font-size: 36rpx;
+}
+
+.coupon-container {
+  width: 94%;
+  margin: auto;
+  margin-top: 24rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  padding-bottom: 10rpx;
+}
+
+.coupon-container .van-cell-title {
+  color: #333;
+}
+
+.coupon-container .custom-youzan-value {
+  --cell-value-color: #333 !important;
+}
+
+.leaving-message-container {
+  position: relative;
+  z-index: 1;
+  width: 94%;
+  margin: auto;
+  margin-top: 24rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.leaving-message-container .van-cell-label {
+  color: #333;
+}
+
+
+.custom-bar-class {
+  box-shadow: 0 -10rpx 10rpx rgba(180, 179, 179, 0.1);
+}
+
+.custom-price-class {
+  --submit-bar-price-color: #ff0c46 !important;
+  --submit-bar-currency-font-size: 24rpx !important;
+  --submit-bar-price-font-size: 30rpx !important;
+  font-weight: 600 !important;
+}
+
+.custom-button-class {
+  --button-danger-background-color: #ff0c46 !important;
+  --button-danger-border-color: #ff0c46 !important;
+  font-weight: 600 !important;
+}
+
+.total-price {
+  position: relative;
+  right: 240rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.total-price .totalNum-text {
+  display: inline-block;
+  color: #ff0c46;
+  font-weight: 600;
+  font-size: 30rpx;
+}
+
+.total-price .totalNum-text .currency-text {
+  font-size: 24rpx;
+  margin-right: 4rpx;
+}
+
+.total-price .totalNum-text .price-integer {
+  font-size: 40rpx;
+}
+
+
+.total-price .delivery-declare {
+  color: #333;
+  text-align: right;
+  font-size: 20rpx;
+}
+
+.youzan-promise-popup-container {
+  position: relative;
+  height: 100%;
+  padding: 20rpx 50rpx 0 50rpx;
+}
+
+.youzan-promise-popup-container .title {
+  color: #333;
+  font-size: 34rpx;
+  margin-bottom: 50rpx;
+  text-align: center;
+}
+
+.youzan-promise-popup-container .content {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+.youzan-promise-popup-container .confirm-button {
+  position: absolute;
+  bottom: 60rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 90%;
+  color: #fff;
+  border-radius: 50rpx;
+  background-color: #ff0c46;
+}
+
+/* 自定义选择收货地址popup组件样式 */
+.shipping-address-popup-class {
+  --popup-background-color: #f7f8fa !important;
+}
+
+.choose-address-popup-container {
+  position: relative;
+  height: 100%;
+  color: #333;
+}
+
+.choose-address-popup-container .scroll-view-container {
+  height: 100%;
+}
+
+.choose-address-popup-container .title {
+  position: fixed;
+  z-index: 10;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  background-color: #fff;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+}
+
+.choose-address-popup-container .title .close-button {
+  position: absolute;
+  right: 30rpx;
+  display: inline-block;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #939393;
+  font-size: 34rpx;
+}
+
+.x-weixin-shipping-address > view {
+  margin-bottom: 20rpx;
+} 
+
+/*撑起高度，使得.x-weixin-shipping-address的组件不会被【选择收货地址】覆盖*/
+.x-weixin-shipping-address::before {
+  display: block;
+  content: ' ';
+  width: 100%;
+  height: 110rpx;
+}
+
+.choose-address-popup-container .shipping-address-container {
+  margin: auto;
+  width: 94%;
+  margin-bottom: 180rpx;
+}
+
+.choose-address-popup-container .shipping-address-container .choose-icon {
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.choose-address-popup-container .shipping-address-container .edit-icon {
+  margin-left: 30rpx;
+}
+
+.choose-address-popup-container .shipping-address-container .address-item {
+  border-radius: 10rpx !important;
+  margin-bottom: 20rpx !important;
+}
+
+.choose-address-popup-container .shipping-address-container .van-cell-text {
+  color: #333;
+}
+
+.choose-address-popup-container .add-address-button-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 5;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-address-popup-container .add-address-button {
+  font-size: 30rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 90%;
+  color: #fff;
+  border-radius: 50rpx;
+  background-color: #ff0c46;
+}
+
+/* 支付操作弹出框 */
+.pay-action-container {
+  padding: 40rpx 80rpx;
+  text-align: center;
+}
+
+.pay-action-container .action-text {
+  font-size: 40rpx;
+  color: #333;
+  margin-bottom: 30rpx;
+}
+
+.pay-action-container .success-button {
+  margin-bottom: 20rpx;
+}
+
+/* 解决 textarea 层级穿透的问题 */
+.hide {
+  visibility: hidden;
+}

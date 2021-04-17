@@ -1,0 +1,16 @@
+<!--components/x-goods-item/x-goods-item.wxml-->
+
+<wxs src="../../wxs/price.wxs" module="priceObj" />
+
+<view class="goods-item" 
+      bind:tap="goodsClick"
+      data-goods-id="{{goods.goodsId}}">
+  <image src="{{goods.showImg}}" mode="widthFix"></image>
+  <view class="goods-item-desc">
+    <view class="goods-name">{{goods.goodsName}}</view>
+    <view>
+      <text class="goods-new-price">￥{{goods.newPrice && priceObj.fixPrice(goods.newPrice)}}</text>
+      <text class="goods-initial-price">￥{{goods.initialPrice && priceObj.fixPrice(goods.initialPrice)}}</text>
+    </view>
+  </view>
+</view>

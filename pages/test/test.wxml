@@ -1,0 +1,8 @@
+<!--pages/test/test.wxml-->
+<view style="text-align: center; font-size: 40rpx;">测试页面 </view>
+<button size="mini" type="primary" bind:tap="backToIndex">返回首页</button>
+
+<button type="primary" bind:tap="handleLoginButtonClick">点击展开登录弹出框</button> 
+<button type="primary" bind:tap="handleRequstHomeApi">点击请求/user/home接口（需要鉴权）</button> 
+
+<x-login isLoginShow="{{showLoginPanel}}"/>

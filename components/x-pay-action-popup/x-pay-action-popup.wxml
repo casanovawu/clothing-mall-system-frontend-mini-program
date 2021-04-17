@@ -1,0 +1,8 @@
+<!--components/x-pay-action-popup/x-pay-action-popup.wxml-->
+<van-popup show="{{ isPayActionPopupShow }}" z-index="{{120}}" catch:tap>
+  <view class="pay-action-container">
+    <view class="action-text">请选择您要模拟的支付操作</view>
+    <button class="success-button" type="primary" catch:tap="onPaySuccess">支付成功</button>
+    <button class="cancel-button" type="warn" catch:tap="onPayCancel">支付未成</button>
+  </view>
+</van-popup>

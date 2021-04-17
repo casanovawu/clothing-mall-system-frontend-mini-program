@@ -1,0 +1,16 @@
+<!--pages/goodsDetail/childCpns/x-detail-desc/x-detail-desc.wxml-->
+<view class="detail-desc-container">
+  <view class="detail-price">
+    <view class="detail-new-price">￥{{goodsDetail.newPrice}}</view>
+    <view class="detail-initial-price">价格<text class="initial-price">￥{{goodsDetail.initialPrice}}</text></view>
+  </view>
+  <view class="detail-share" bind:tap="onShareButtonClick">
+    <van-icon name="share" color="#646566" />
+    <view class="share-text">分享</view>
+  </view>
+  <view class="detail-goods-name">{{goodsDetail.goodsName}}</view>
+</view>
+
+<!-- 分享面板 -->
+<van-share-sheet show="{{ showShare }}" title="立即分享给好友" options="{{ options }}" bind:select="onShareSheetSelect"
+  bind:close="onShareSheetClose" />

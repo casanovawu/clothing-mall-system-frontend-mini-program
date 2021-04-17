@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "x-empty-container": "/components/x-empty-container/x-empty-container",
+    "x-search-history": "./childCpns/x-search-history/x-search-history",
+    "x-search-option": "./childCpns/x-search-option/x-search-option",
+    "x-search-result": "./childCpns/x-search-result/x-search-result"
+  },
+  "navigationBarTitleText": "商品搜索",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black"
+}

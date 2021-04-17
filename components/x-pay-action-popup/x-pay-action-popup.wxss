@@ -1,0 +1,23 @@
+/* components/x-pay-action-popup/x-pay-action-popup.wxss */
+/* 支付操作弹出框 */
+.pay-action-popup {
+  --overlay-background-color: rgba(0, 0, 0, .4) !important;
+}
+
+.pay-action-container {
+  padding: 40rpx 80rpx;
+  text-align: center;
+}
+
+.pay-action-container .action-text {
+  font-size: 40rpx;
+  color: #333;
+  margin-bottom: 30rpx;
+}
+
+.pay-action-container .success-button {
+  margin-bottom: 20rpx;
+}
+
+
+

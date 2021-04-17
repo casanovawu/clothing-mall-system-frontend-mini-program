@@ -1,0 +1,62 @@
+/* pages/goodsDetail/childCpns/x-detail-desc/x-detail-desc.wxss */
+.detail-desc-container {
+  position: relative;
+  background-color: #fff;
+  border-bottom: 16rpx solid #f9f9f9;
+  padding: 20rpx 20rpx 46rpx 24rpx;
+}
+
+.detail-price .detail-new-price {
+  font-size: 46rpx;
+  font-weight: 700;
+  color: #ff0c46;
+}
+
+.detail-price .detail-initial-price {
+  font-size: 24rpx;
+  color: #bbb;
+  margin-bottom: 10rpx;
+  padding-left: 12rpx;
+}
+
+.initial-price {
+  margin-left: 8rpx;
+  text-decoration: line-through;
+}
+
+.detail-goods-name {
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 18rpx;
+}
+
+.detail-price .detail-new-price {
+  font-size: 46rpx;
+  font-weight: 700;
+  color: #ff0c46;
+}
+
+.detail-price .detail-initial-price {
+  font-size: 22rpx;
+  color: #bbb;
+  margin-bottom: 10rpx;
+}
+
+.initial-price {
+  margin-left: 8rpx;
+  text-decoration: line-through;
+}
+
+.detail-share {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 38rpx;
+  top: 30rpx;
+}
+
+.share-text {
+  font-size: 26rpx;
+  color: #646566;
+}

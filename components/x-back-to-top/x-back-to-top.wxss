@@ -1,0 +1,13 @@
+/* components/x-back-to-top/x-back-to-top.wxss */
+.back-to-top-container {
+  position: fixed;
+  right: 30rpx;
+  bottom: 106rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.back-to-top-container .back-to-top {
+  width: 100%;
+  height: 100%;
+}

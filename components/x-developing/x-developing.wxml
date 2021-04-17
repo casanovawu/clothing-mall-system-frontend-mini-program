@@ -1,0 +1,5 @@
+<!--components/x-developing/x-developing.wxml-->
+<view class="no-data-container">
+  <image src="/assets/common/developing.png" mode="widthFix"></image>
+  <view class="developing-text">功能开发中...</view>
+</view>

@@ -1,0 +1,16 @@
+var formatRegionWithCuttingLine = function (regions) {
+  if (!(regions.forEach && regions.every)) throw '传入的regions必须是一个数组！'
+
+  return regions.join(' / ')
+}
+
+var formatRegionWithDirectJoin = function (regions) {
+  if (!(regions.forEach && regions.every)) throw '传入的regions必须是一个数组！'
+
+  return regions.join('')
+}
+
+module.exports = {
+  formatRegionWithCuttingLine: formatRegionWithCuttingLine,
+  formatRegionWithDirectJoin: formatRegionWithDirectJoin
+}

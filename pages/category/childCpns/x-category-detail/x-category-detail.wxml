@@ -1,0 +1,5 @@
+<!--pages/category/childCpns/x-category-detail/x-category-detail.wxml-->
+<view class="category-container">
+  <view class="category-title">{{categoryInfo.categoryName}}专区</view>
+  <x-goods goodsList="{{categoryInfo.goodsList}}" />
+</view>

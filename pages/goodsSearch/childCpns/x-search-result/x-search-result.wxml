@@ -1,0 +1,10 @@
+<!--pages/goodsSearch/childCpns/x-search-result/x-search-result.wxml-->
+<view class="search-result-container">
+  <block wx:if="{{goodsResultList.length !== 0}}">
+    <x-goods goodsList="{{goodsResultList}}"/>
+    <x-bottom-declare/>
+  </block>
+  <block wx:else>
+    <x-no-search-result/>
+  </block>
+</view>

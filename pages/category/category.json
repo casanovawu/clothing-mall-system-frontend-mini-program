@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "x-category-detail": "./childCpns/x-category-detail/x-category-detail",
+    "x-back-to-top": "/components/x-back-to-top/x-back-to-top"
+    
+  },
+  "navigationBarTitleText": "分类",
+  "onReachBottomDistance": 100
+}

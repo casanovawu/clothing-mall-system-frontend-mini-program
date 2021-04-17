@@ -1,0 +1,8 @@
+<!--pages/orderList/childCpns/x-order-option.wxml-->
+<view class="order-option-container">
+  <block wx:for="{{orderOptions}}" wx:key="index">
+    <view class="option" bind:tap="itemClick" data-index="{{index}}">
+      <text class="{{currentIndex === index ? 'active': ''}}" >{{item}}</text>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,10 @@
+<!--pages/category/category.wxml-->
+<van-sidebar active-key="{{ activeKey }}" bind:change="onChange" custom-class="theme-color">
+  <block wx:for="{{categoryMenu}}" wx:key="index">
+    <van-sidebar-item title="{{item.categoryName}}" />
+  </block>
+</van-sidebar>
+
+<x-category-detail categoryInfo="{{selectedCategoryInfo}}" />
+
+<x-back-to-top wx:if="{{isBackTopShow}}"/>

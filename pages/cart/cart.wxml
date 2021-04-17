@@ -1,0 +1,93 @@
+<!--pages/cart/cart.wxml-->
+<wxs src="../../wxs/price.wxs" module="priceObj"/>
+
+<view class="cart-container">
+  <block wx:if="{{!isLogin && cartList.length === 0}}">
+    <x-no-login class="x-no-login" bind:loginButtonClick="handleLoginButtonClick" />
+  </block>
+  <block wx:else>
+    <x-cart-heading bind:onEdit="handleEdit" isEdit="{{isEdit}}"/>
+    <block wx:if="{{cartList.length === 0}}">
+      <x-empty-cart />
+    </block>
+    <block wx:else>
+      <view class="cart-goods-container">
+        <block wx:for="{{cartList}}" wx:key="cartId">
+          <view class="cart-goods-item">
+            <view 
+              class="goods-check-button"
+              bind:tap="onCartGoodsSelectButtonChange"
+              data-cart-index="{{index}}">
+              <van-checkbox 
+                value="{{ item.checked }}" 
+                checked-color="#ff0c46" />
+                
+            </view>
+            <view class="goods-info" bind:tap="goToGoodsDetail" data-goods-id="{{item.goodsId}}">
+              <van-card
+                thumb-mode="widthFix"
+                custom-class="custom-card" 
+                thumb-class="custom-thumb"
+                desc-class="custom-desc"
+                price="{{item.goodsObj.newPrice && priceObj.fixPrice(item.goodsObj.newPrice)}}" 
+                desc="{{item.goodsSkuDesc}}" 
+                title="{{item.goodsObj.goodsName}}" 
+                thumb="{{item.goodsObj.showImg}}" />
+    
+            </view>
+            <!-- 这里使用 catch，阻止事件冒泡 -->
+            <van-stepper
+                custom-class="custom-stepper-class"
+                value="{{ item.num }}" 
+                integer
+                min="1" 
+                max="{{item.stock}}"
+                disabled="{{isStepperButtonDisabled}}" 
+                data-cart-index="{{index}}"
+                data-num="{{item.num}}"
+                data-stock="{{item.stock}}"
+                bind:plus="onCountPlus"
+                bind:minus="onCountMinus"
+                bind:blur="onStepperBlur"
+                bind:focus="onStepperFocus"
+                bind:overlimit="onCountOverlimit" />
+          </view>
+        </block>
+      </view>
+
+        <block wx:if="{{!isEdit}}">
+          <van-submit-bar 
+          bar-class="custom-bar-class"
+          disabled="{{isSettleButtonDisabled}}"
+          price-class="custom-price-class"
+          button-class="custom-button-class"
+          price="{{ totalPrice * 100 }}" 
+          button-text="去结算" 
+          bind:submit="goToSettle" 
+          tip="{{ true }}" >
+          <van-checkbox value="{{ allIsSelected }}" checked-color="#ff0c46" bind:change="onAllSelectButtonChange" >全选</van-checkbox>
+        </van-submit-bar>
+        </block>
+        <block wx:else>
+          <van-submit-bar 
+          bar-class="custom-bar-class"
+          price-class="custom-price-class"
+          button-class="custom-button-class custom-button-delete-class"
+          button-text="删除" 
+          bind:submit="onDeleteClickButton" 
+           >
+            <van-checkbox 
+              custom-class="custom-delete-all-button"
+              value="{{ allIsSelected }}" 
+              checked-color="#ff0c46" 
+              bind:change="onAllSelectButtonChange" >全选</van-checkbox>
+          </van-submit-bar>
+        </block>
+    </block>
+  </block>
+
+</view>
+
+<x-login isLoginShow="{{showLoginPanel}}" bind:loginSuccess="handleLoginSuccess" />
+
+<van-toast id="van-toast" />

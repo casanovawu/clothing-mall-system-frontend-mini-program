@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "x-weixin-shipping-address": "/components/x-weixin-shipping-address/x-weixin-shipping-address",
+    "x-bottom-declare": "/components/x-bottom-declare/x-bottom-declare",
+
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "navigationBarTitleText": "收货地址",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black"
+}

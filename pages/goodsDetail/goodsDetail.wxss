@@ -1,0 +1,24 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+.detail-swiper swiper {
+  height: 800rpx;
+}
+
+
+/* .bottomdeclareclass {
+  height: 200rpx;
+} */
+
+/* .x-bottom-declare {
+  height: 300rpx !important;
+} */
+
+/* .x-bottom-declare .declare-container{
+  height: 300rpx !important;
+} */
+
+.x-bottom-declare > view {
+  height: 220rpx !important;
+  padding-top: 46rpx !important;
+}
+
+

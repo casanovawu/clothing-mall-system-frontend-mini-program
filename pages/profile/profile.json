@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "x-bottom-declare": "/components/x-bottom-declare/x-bottom-declare",
+    "van-button": "@vant/weapp/button/index",
+    "x-login": "/components/x-login/x-login"
+  },
+  "navigationBarTitleText": "会员主页",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

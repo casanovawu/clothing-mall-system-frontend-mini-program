@@ -1,0 +1,24 @@
+/* pages/home/childCpns/x-theme-title/x-theme-title.wxss */
+
+.theme-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 20rpx;
+  margin-bottom: 20rpx; */
+  height: 90rpx;
+}
+
+.theme-title .theme-left,
+.theme-title .theme-right {
+  width: 30%;
+  height: 16rpx;
+  margin-top: 4rpx;
+}
+
+.theme-title .theme-text {
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 8rpx;
+  margin-right: 8rpx;
+}

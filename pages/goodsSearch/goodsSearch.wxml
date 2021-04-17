@@ -1,0 +1,35 @@
+<!--pages/goodsSearch/goodsSearch.wxml-->
+<view class="goods-search-container">
+  <van-search 
+    value="{{ keyword }}" 
+    placeholder="搜索商品" 
+    show-action="{{isShowAtion}}"
+    focus 
+    shape="round" 
+    bind:search="onSearch"
+    bind:cancel="onCancel"
+    bind:focus="onFocus"
+    bind:clear="onClear" />
+
+  <!-- 使用 hidden 属性作用于自定义组件，为何不生效？ -->
+  <block wx:if="{{isShowSearchHistory}}">
+    <x-search-history 
+      searchHistories="{{searchHistories}}" 
+      bind:removeSearchHistories="removeSearchHistories"
+      bind:SearchItemClick="handleSearchItemClick" 
+      wx:if="isShowSearchHistory" />
+  </block>
+  <block wx:else>
+    <x-search-option 
+      bind:defaultItemClick="handleDefaultItemClick"
+      bind:priceItemClick="handlePriceItemClick"
+      bind:newItemClick="handleNewItemClick"
+      isAsc="{{isAsc}}"/>
+    <x-search-result 
+    goodsResultList="{{goodsResultList}}"  />
+  </block>
+  
+</view>
+
+
+

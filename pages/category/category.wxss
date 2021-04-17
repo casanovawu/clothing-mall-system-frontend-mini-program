@@ -1,0 +1,19 @@
+/* pages/category/category.wxss */
+
+/* 
+关于样式定制，详细见：https://vant-contrib.gitee.io/vant-weapp/#/theme#ding-zhi-dan-ge-zu-jian-de-zhu-ti-yang-shi
+
+*/
+.theme-color {
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* 下边的这个变量是通过 wxml 面板获取到的 */
+  --sidebar-selected-border-color: #ff0c46;
+  /* --sidebar-selected-border-color: #ff6975; */
+  --sidebar-font-size: 30rpx;
+  text-align: center !important;
+  height: 100% !important;
+  /* background-color: pink !important; */
+  
+}

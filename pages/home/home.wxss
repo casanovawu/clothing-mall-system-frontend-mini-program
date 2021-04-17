@@ -1,0 +1,10 @@
+/* pages/home/home.wxss */
+
+.cbackgroundcolor {
+  background-color: pink;
+} 
+
+.cheight {
+  height: 2000rpx;
+}
+

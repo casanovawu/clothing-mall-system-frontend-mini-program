@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-search": "@vant/weapp/search/index",
+    "x-back-to-top": "/components/x-back-to-top/x-back-to-top",
+    "x-swiper": "/components/x-swiper/x-swiper",
+    "x-bottom-declare": "/components/x-bottom-declare/x-bottom-declare",
+    "x-theme": "./childCpns/x-theme/x-theme"
+
+  },
+  "navigationBarTitleText": "梦想女孩",
+  "onReachBottomDistance": 300,
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

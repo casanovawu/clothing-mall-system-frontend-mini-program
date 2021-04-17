@@ -1,0 +1,7 @@
+<!--pages/home/childCpns/x-theme/x-theme.wxml-->
+<block wx:for="{{themeList}}" wx:key="index">
+  <view class="theme-container">
+      <x-theme-title themeObj="{{themeObj}}" themeType="{{item}}"/>
+      <x-goods goodsList="{{themeInfo[item].goodsList}}"/>
+  </view>
+</block>

@@ -1,0 +1,21 @@
+<!--pages/goodsSearch/childCpns/x-search-histroy/x-search-history.wxml-->
+<view class="history-container" wx:if="{{isSearchHistoryShow}}">
+  <view class="history-heading">
+    <view class="history-name">搜索历史</view>
+    <view class="history-trash" bind:tap="handleTrashClick">
+      <image src="/assets/goods-search/trash-can.png" mode="widthFix"></image>
+      清空
+    </view>
+  </view>
+  <view class="history-content">
+    <view 
+      class="history-item"
+      wx:for="{{searchHistories}}" 
+      wx:key="index"
+      data-index="{{index}}"
+      bind:tap="onSearchItemClick">
+      {{item}}
+    </view>
+    
+  </view>
+</view>

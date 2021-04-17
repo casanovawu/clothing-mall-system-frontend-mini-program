@@ -1,0 +1,45 @@
+/* pages/cart/childCpns/x-no-login/x-no-login.wxss */
+.no-login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+ 
+}
+
+.no-login-container .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-bottom: 120rpx;
+}
+
+.no-login-container .logo image {
+  width: 120rpx;
+}
+
+.no-login-container .login-button {
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: 1rpx solid #ff0c46;
+  border-radius: 200rpx;
+  color: #ff0c46;
+  font-size: 34rpx;
+  margin-bottom: 50rpx;
+}
+
+.no-login-container .no-login-text {
+  color: #bfbec3;
+  font-size: 28rpx;
+  font-weight: 500;
+}

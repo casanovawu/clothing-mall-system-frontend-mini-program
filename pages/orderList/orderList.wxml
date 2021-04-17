@@ -1,0 +1,77 @@
+<!--pages/order-list/order-list.wxml-->
+<wxs src="../../wxs/price.wxs" module="priceObj"/>
+
+<x-order-option 
+  orderOptions="{{orderOptions}}"
+  selectedOrderOptionIndex="{{selectedOrderOptionIndex}}"
+  bind:onOrderOptionButtonClick="handleOrderOptionButtonClick"/>
+
+<view class="order-list-container">
+  <block wx:for="{{selectedOrderList}}" wx:key="index">
+      <view class="order-item" 
+        data-order-no="{{item.orderNo}}" 
+        data-pay-state="{{item.payState}}"
+        bind:tap="onOrderItemClick">
+      <view class="order-head">
+        <view class="order-title">
+          <view class="shop-name">店铺：梦想女孩</view>
+          <view class="transaction-state">{{item.payState === 0 ? '待付款' : item.payState === 1 ? '待发货' : '交易关闭'}}</view>
+        </view>
+        <view class="order-no">订单编号：{{item.orderNo}}</view>
+      </view>
+      <view class="order-content">
+        <van-card 
+            custom-class="custom-card"
+            thumb-class="custom-thumb"
+            desc-class="custom-desc"
+            thumb-mode="widthFix"
+            num="{{item.goodsNums[0]}}" 
+            price="{{item.goodsInfos[0].newPrice && priceObj.fixPrice(item.goodsInfos[0].newPrice)}}" 
+            desc="{{item.goodsSkuDescs[0]}}" 
+            title="{{item.goodsInfos[0].goodsName}}" 
+            thumb="{{item.goodsInfos[0].showImg}}" />
+        <view class="view-all-goods" wx:if="{{item.goodsInfos.length > 1}}">查看全部{{item.goodsInfos.length}}件商品</view>
+      </view>
+      <block wx:if="{{item.payState === 0}}">
+        <view class="order-footer">
+          <view class="total-fee-wrapper">
+            <!-- <view class="time-wrapper">
+              <view class="time-desc">支付剩余时间：</view>
+              <van-count-down time="{{ time }}" bind:finish="{{onCountDownFinish}}" data-order-no="{{item.orderNo}}"/>
+            </view> -->
+            <view class="total-fee">
+              <text>需付款：</text>
+              <text class="total-fee-num">￥{{item.totalFee && priceObj.fixPrice(item.totalFee)}}</text>
+            </view>
+          </view>
+          <x-pay-button class="x-pay-button" 
+            bind:onConfirmButtonClick="handleConfirmButtonClick"
+            bind:onCancelButtonClick="handleCancelButtonClick"
+            data-order-no="{{item.orderNo}}"/>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="order-footer">
+          <view class="total-fee right">
+            <text>实付款：</text>
+            <text class="total-fee-num">￥{{item.totalFee && priceObj.fixPrice(item.totalFee)}}</text>
+          </view>
+        </view>
+      </block>
+
+      
+    </view>
+  </block>
+  
+</view>  
+
+<x-no-order wx:if="{{!isDeveloping && selectedOrderList.length === 0}}"/>
+
+<x-developing wx:if="{{isDeveloping}}" />
+
+<!-- 放在这里是为了拿到 orderNo -->
+<x-pay-action-popup 
+  data-order-no="{{item.orderNo}}"
+  isPayActionPopupShow="{{isPayActionPopupShow}}" 
+  bind:onPaySuccess="handlePaySuccess"
+  bind:onPayCancel="handlePayCancel"/>

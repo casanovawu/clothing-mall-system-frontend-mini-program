@@ -1,0 +1,41 @@
+/* components/x-login/x-login.wxss */
+.login-container {
+  position: relative;
+  padding: 46rpx 28rpx 36rpx 28rpx;
+  background-color: white;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+
+.login-heading {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+
+.login-heading image {
+  width: 80rpx;
+  margin-right: 30rpx;
+}
+
+.login-purpose {
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+}
+
+.login-tip {
+  font-size: 26rpx;
+  color: #bfbec3;
+}
+
+.login-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  bottom: 120rpx;
+}
+

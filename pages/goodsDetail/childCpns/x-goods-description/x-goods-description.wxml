@@ -1,0 +1,20 @@
+<!--pages/goodsDetail/childCpns/x-goods-description/x-goods-description.wxml-->
+<view class="goods-declare-container">
+  <van-divider contentPosition="center"
+    customStyle="color: #333; border-color: #ccc; font-size: 30rpx; font-weight: 500; margin: 14rpx 0;">
+    商品说明
+  </van-divider>
+  <view class="goods-declare-text">
+    <view class="declare-item">
+      <view class="title">划线价格：</view>
+      <text>划线的价格是商品的专柜价、吊牌价、正品零售价、指导价、曾经展示过的销售价等，仅供你参考。</text>
+    </view>
+    <view class="declare-item">
+      <view class="title">未划线价格：</view>
+      <text>未划线的价格是商品的销售标价，具体的成交价格因会员使用优惠券、积分等发生变化，最终以订单结算价格为准。</text>
+    </view>
+    <view class="declare-item">*此说明仅当出现价格比较时有效。若这件商品针对划线价格进行了特殊说明，以特殊说明为准。</view>
+    <view class="declare-item">
+      此页面下的商品/服务的标题、价格、详情等信息内容系由梦想女孩店铺发布，其真实性、准确性和合法性均由梦想女孩店铺负责。如消费者对服务的标题、价格、详情等任何信息有疑问，请在购买前与梦想女孩店铺工作人员沟通确认。</view>
+  </view>
+</view>

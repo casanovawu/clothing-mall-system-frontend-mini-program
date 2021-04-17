@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "x-goods": "/components/x-goods/x-goods",
+    "x-bottom-declare": "/components/x-bottom-declare/x-bottom-declare",
+    "x-no-search-result": "../x-no-search-result/x-no-search-result"
+  }
+}

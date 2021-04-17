@@ -1,0 +1,33 @@
+/* components/x-weixin-shipping-address/x-weixin-shipping-address.wxss */
+.wx-shipping-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14rpx 28rpx;
+  font-size: 28rpx;
+  color: #333; 
+  width: 87%;
+  margin: auto;
+  /* margin-top: 20rpx; */
+  border-radius: 10rpx;
+  background-color: #fff;
+  height: 60rpx;
+}
+
+.wx-shipping-container .left-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wx-shipping-container .left-item image {
+  width: 30rpx;
+}
+
+.wx-shipping-container .left-item .wx-shipping-name {
+  margin-left: 10rpx;
+}
+
+.wx-shipping-container .right-arrow {
+  width: 30rpx;
+}

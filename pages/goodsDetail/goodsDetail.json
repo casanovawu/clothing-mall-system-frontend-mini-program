@@ -1,0 +1,25 @@
+{
+  "usingComponents": {
+    "x-swiper": "/components/x-swiper/x-swiper",
+    "x-bottom-declare": "/components/x-bottom-declare/x-bottom-declare",
+    "x-back-to-top": "/components/x-back-to-top/x-back-to-top",
+    "x-login": "/components/x-login/x-login",
+    
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-toast": "@vant/weapp/toast/index",
+
+    "x-detail-desc": "./childCpns/x-detail-desc/x-detail-desc",
+    "x-goods-description": "./childCpns/x-goods-description/x-goods-description",
+    "x-delivery-service": "./childCpns/x-delivery-service/x-delivery-service",
+    "x-sku-service": "./childCpns/x-sku-service/x-sku-service",
+    "x-goods-images-detail": "./childCpns/x-goods-images-detail/x-goods-images-detail",
+    "x-shop-info": "./childCpns/x-shop-info/x-shop-info"
+  },
+  "navigationBarTitleText": "商品详情",
+  "navigationBarBackgroundColor": "#ff0c46",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

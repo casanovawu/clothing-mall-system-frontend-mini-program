@@ -1,0 +1,6 @@
+/* components/x-empty-container/x-empty-container.wxss */
+.empty-container {
+  width: 100%;
+  height: 2000rpx;
+  background-color: pink;
+}

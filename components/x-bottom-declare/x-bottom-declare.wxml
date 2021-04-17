@@ -1,0 +1,5 @@
+<!--components/x-bottom-declare/x-bottom-declare.wxml-->
+<view class="declare-container">
+  <image src="/assets/common/bottom-declare.png" mode="widthFix"></image>
+  <view class="declare-text">{{declareText}}</view>
+</view>

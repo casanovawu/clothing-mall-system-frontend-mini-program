@@ -1,0 +1,97 @@
+<!--pages/goodsDetail/childCpns/x-sku-service/x-sku-service.wxml-->
+<wxs src="../../../../wxs/price.wxs" module="priceObj" />
+
+<view class="sku-container">
+  <view class="sku-service" bind:tap="showServicePopup">
+    <view class="service-name">服务</view>
+    <view class="service-desc">收货后结算·快递发货</view>
+    <van-icon class="sku-arrow" name="arrow" color="#646566" />
+  </view>
+  <view class="sku-selection" bind:tap="showSelectionPopup1">
+    <view class="sku-name">选择</view>
+    <view class="sku-desc">
+    {{selectedSkuContentList.length === 1 ? 
+      selectedSkuContentList[0].selectedContent : 
+      selectedSkuContentList.length === 2 ? 
+      selectedSkuContentList[0].selectedContent + '；' + selectedSkuContentList[1].selectedContent :
+      '尺码；颜色'}}
+    </view>
+    <van-icon class="sku-arrow" name="arrow" color="#646566" />
+  </view>
+</view>
+
+<!-- 收货服务提醒 -->
+<van-popup show="{{ isShowDeliveryServicePopup }}" position="bottom" custom-style="height: 60%;"
+  bind:close="onServicePopupClose" round>
+  <view class="popup-service-container">
+    <view class="popup-item">
+      <view class="title">收货后结算</view>
+      <view class="content">该店铺交易由梦科凡奇提供资金存管服务，当符合以下条件时，资金自动结算给商家：买家确认收货或到达约定的自动确认收货日期。交易资金未经梦科凡奇存管的情形（储值型、电子卡券等）
+        不在本服务范围内。</view>
+    </view>
+    <view class="popup-item">
+      <view class="title">快递发货</view>
+      <view class="content">可选择快递发货配送上门，本商品免运费。</view>
+    </view>
+    <view class="confirm-button" bind:tap="onServicePopupConfirm">我知道了</view>
+  </view>
+
+</van-popup>
+
+<!-- 规格选择 -->
+<van-popup show="{{ isShowSelectionPopup }}" position="bottom" custom-style="height: 80%;"
+  bind:close="onSelectionPopupClose" closeable round>
+  <view class="popup-selection-container">
+      <view class="popup-item popup-heading-item">
+        <!-- 因为没有过多图片数据做项目支持，所以，这里选择拿 banners 列表中的第1条数据作为规格面板中的图片 -->
+        <image class="sku-big-image" src="{{goodsBanners[0].showImg}}" mode="widthFix"></image>
+        <view class="content">
+          <!-- （1）理论上，每种具体的规格的价格应该会有所出入，但是这里因为没有过多的数据支持，
+                  所以，数据库中设置每种商品的所有规格组合的价格都是相等的
+           -->
+          <!-- （2）考虑到后续需要使用微信支付，所以这里设置为一个较小固定的价格（比如0.01或者0.1），而不是数据库返回的固定价格（更新：提交订单后在做统一小额处理） -->
+          <view class="sku-price">￥{{goodsPrice && priceObj.fixPrice(goodsPrice)}}</view>
+          <view class="sku-stock">剩余<text>{{selectedSkuStock}}</text>件</view>
+          <!-- <view>请选择 颜色；尺码</view> -->
+          <view wx:if="{{selectedSkuContentList.length < 2}}">请选择 尺码；颜色</view>
+          <view wx:else>已选择 {{selectedSkuContentList[0].selectedContent + '；' + selectedSkuContentList[1].selectedContent}}</view>
+        </view>
+      </view>
+      <block wx:for="{{goodsAttrKeys}}" wx:key="index" wx:for-item="attrKeyItem">
+        <view class="popup-item popup-sku-item">
+          <view class="title">{{attrKeyItem.attrKey}}</view>
+          <view class="content">
+            <view 
+              class="{{'option ' + (attrKeyItem.attrKey === '尺码' ? (currentIndex1 === attrValueIdx ? 'active' : ''): (currentIndex2 === attrValueIdx ? 'active' : '') )}}" 
+              wx:for="{{attrKeyItem.goodsAttrValues}}" 
+              wx:for-index="attrValueIdx" 
+              wx:for-item="attrValueItem"
+              wx:key="idx" 
+              data-attr-value-index="{{attrValueIdx}}"
+              data-attr-key="{{attrKeyItem.attrKey}}"
+              bind:tap="skuButtonClick">{{attrValueItem.attrValue}}</view>
+          </view>
+        </view>
+    </block>
+
+
+    <view class="purchase-count">
+      <view class="count-name">购买数量</view>
+      <van-stepper value="{{ 1 }}" min="1" max="{{selectedSkuStock}}" integer bind:change="onCountChange" bind:overlimit="onCountOverlimit" />
+    </view>
+    
+    <block wx:if="{{!dConfirmContent}}">
+      <view class="buy-action">
+        <view class="add-cart" bind:tap="handleAddCart">加入购物车</view>
+        <view class="buy-now" bind:tap="handleBuyNow">立即购买</view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="buy-action" bind:tap="handleConfirmButtonClick">确认</view>
+    </block>
+    
+  </view>
+</van-popup>
+
+<!-- 购买数量偏离设定阈值时显示 -->
+<!-- <van-toast id="van-toast" /> -->

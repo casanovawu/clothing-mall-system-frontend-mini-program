@@ -1,0 +1,19 @@
+/* pages/category/childCpns/x-category-detail/x-category-detail.wxss */
+
+.category-container {
+  position: absolute;
+  left: 170rpx;
+  top: 30rpx;
+  /* 375px - 85px = 290px */
+  width: 580rpx;
+}
+
+.category-title {
+  display: inline-block;
+  color: #aaa;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  margin-left: 14rpx;
+  margin-bottom: 14rpx;
+}
+

@@ -1,0 +1,56 @@
+/* pages/shipping-address/shipping-address.wxss */
+page {
+  width: 100%;
+  background-color: #f7f8fa;
+}
+
+.x-weixin-shipping-address > view {
+  margin-top: 20rpx;
+}
+
+.x-bottom-declare > view {
+  margin-top: 200rpx;
+}
+
+.address-list-container {
+  width: 94%;
+  margin: auto;
+  margin-top: 20rpx;
+}
+
+.address-list-container .address-item {
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.address-list-container .address-item .van-cell-text {
+  color: #333;
+}
+
+.add-address-button-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 5;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-address-button-container .add-address-button {
+  font-size: 30rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 90%;
+  color: #fff;
+  border-radius: 50rpx;
+  background-color: #ff0c46;
+}
+
+
+

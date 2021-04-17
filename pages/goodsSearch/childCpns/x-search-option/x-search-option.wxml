@@ -1,0 +1,20 @@
+<!--pages/goodsSearch/childCpns/x-search-option/x-search-option.wxml-->
+<view class="search-option-container">
+  <view class="{{'option ' + (currentIndex === '0' ? 'active' : '')}}"
+    data-index="0"
+    bind:tap="optionClick">综合</view>
+  <view class="{{'option ' + (currentIndex === '1' ? 'active' : '')}}"
+    data-index="1"
+    bind:tap="optionClick">
+    <text>价格</text>
+    <image class="up-arrow" 
+      src="{{isPriceItemClick && !isAsc ? '/assets/goods-search/up-arrow@selected.png' : '/assets/goods-search/up-arrow.png'}}" 
+      mode="widthFix"></image>
+    <image class="bottom-arrow" 
+      src="{{isPriceItemClick && isAsc ? '/assets/goods-search/bottom-arrow@selected.png' : '/assets/goods-search/bottom-arrow.png'}}" 
+      mode="widthFix"></image>
+  </view>
+  <view class="{{'option ' + (currentIndex === '2' ? 'active' : '')}}" 
+    data-index="2"
+    bind:tap="optionClick">上新</view>
+</view>

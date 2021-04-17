@@ -1,0 +1,9 @@
+<!--pages/cart/childCpns/x-cart-heading/x-cart-heading.wxml-->
+<view class="cart-heading-container">
+  <view class="cart-title" bind:tap="goToIndex">
+    <image class="shop-image" src="/assets/cart/shop.png" mode="widthFix"></image>
+    <text class="shop-name">梦想女孩</text>
+    <image src="/assets/common/right-arrow.png" mode="widthFix"></image>
+  </view>
+  <view class="cart-edit" bind:tap="onEdit">{{isEdit ? '编辑' : '完成'}}</view>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<view class="order-detail-container">
+  <view>订单编号为：{{orderNo}}</view>
+  <view>支付状态为：{{payState === 0 ? '未支付' : payState === 1 ? '已支付' : '其他'}}</view>
+  <view>页面跳转自：{{from === 'confirm-order' ? '确认订单页' : '订单列表页'}}</view>
+  <view>页面待开发...</view>
+</view>
