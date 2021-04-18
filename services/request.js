@@ -83,7 +83,7 @@ const _showLoginPanel = (options) => {
   currentPage.setData({
     showLoginPanel: true
   })
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     app.globalEvent.on('loginSuccess', function (e) {
       request(options).then(function (result) {
         resolve(result)

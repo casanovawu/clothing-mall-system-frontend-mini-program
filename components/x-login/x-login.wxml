@@ -15,6 +15,6 @@
     </view>
     <view class="login-purpose">为提供更优质的服务，梦想女孩需要获取以下信息：</view>
     <view class="login-tip">● 你的公开信息（昵称、头像、地区及性别）</view>
-    <button class="login-button" type="primary" bindgetuserinfo="login" open-type="getUserInfo">确认</button>
+    <button class="login-button" type="primary" bind:tap="userLogin">确认</button>
   </view>
 </van-popup>

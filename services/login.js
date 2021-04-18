@@ -27,24 +27,16 @@
 import {request} from './request'
 import wxp from '../utils/wxp'
 
-export const authLogin = (token, code, userInfo, encryptedData, iv, sessionKeyIsValid) => {
+export const authLogin = (code, userInfo) => {
 
   return request({
     url: '/user/wexin-login',
     method: 'POST',
-    header: {
-      'content-type': 'application/json',
-      'Authorization': `Bearer ${token || ''}`
-    },
     data: {
       code,
       userInfo,
-      encryptedData,
-      iv,
-      sessionKeyIsValid
     }
   })
-
 }
 
 export const checkSession = () => {
