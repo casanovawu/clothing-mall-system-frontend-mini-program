@@ -59,7 +59,7 @@ Page({
     const {
       isLogin
     } = this.data
-    // console.log('onshow isLogin---', isLogin)
+    console.log('onshow isLogin---', isLogin)
     // 当前登录了，但是购物车页面可能并没有更新
     if (token && isLogin) {
       this._getCartList(false)

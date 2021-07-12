@@ -6,7 +6,4 @@
 // 校园网
 // export const BASE_URL = 'http://172.25.107.16:3000'
 
-// 云服务器后端地址
-export const BASE_URL = 'http://8.129.234.28:8004'
-
 export const TIMEOUT = 5000

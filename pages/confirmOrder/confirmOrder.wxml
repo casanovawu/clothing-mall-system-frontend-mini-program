@@ -72,7 +72,7 @@
   </van-cell>
 </view>
 
-<view class="{{'leaving-message-container ' + ((isPromisePopupShow || isPayActionPopupShow) ? 'hide' : '' )}}">
+<!-- <view class="{{'leaving-message-container ' + ((isPromisePopupShow || isPayActionPopupShow) ? 'hide' : '' )}}">
   <van-field
     placeholder="留言建议提前协商（250字以内）"
     model:value="{{leaveMessage}}"
@@ -84,7 +84,7 @@
       <view class="van-cell-label">买家留言</view>
     </view> 
   </van-field> 
-</view>
+</view> -->
 
 <x-bottom-declare/>
 
