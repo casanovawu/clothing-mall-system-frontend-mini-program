@@ -1,13 +1,10 @@
 ## 仓库介绍
 
-这是笔者毕业设计项目（服装商城系统）的微信小程序版本客户端代码，后续计划开发出基于Vue和React版本的服装商城系统的客户端，链接地址如下：
-
--   [Vue版本的服装商城系统客户端](https://gitee.com/xkyong/clothing-mall-system-frontend-vue)
--   [React版本的服装商城系统客户端](https://gitee.com/xkyong/clothing-mall-system-frontend-react)
+这是笔者毕业设计项目（服装商城系统）的微信小程序版本客户端代码，后续计划开发出基于Vue和React版本的服装商城系统的客户端，敬请期待~
 
 另外，要想看到该客户端的实际运行效果，是需要手动开启对应的后台服务的。如何开启后台服务详细见：
 
--   [基于Koa开发的服装商城系统服务端](https://gitee.com/xkyong/clothing-mall-system-backend)
+-   [基于Koa开发的服装商城系统服务端](https://github.com/xkyong/clothing-mall-system-backend)
 
 
 
